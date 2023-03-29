@@ -17,7 +17,7 @@ console.log(quotient(10, 2)); */
     return (num1 % num2);
 }
 console.log(remainder(10, 3)); */
-
+/*
 function isTenorTwenty(num) {
     return (num === 10 || num === 20);
 }
@@ -221,7 +221,7 @@ let numbers = [1, 2, 3, 4, 5];
 let result = multiplyBy2(numbers);
 console.log("The result is: " + result);
 */
-
+/*
 function oddNumbers(input) {
     let newArray = [];
 
@@ -243,3 +243,54 @@ line`;
 console.log(singleQuotes);
 console.log(doubleQuotes);
 console.log(backticks);
+*/
+/*
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
+function greeting(message) {
+
+  return '';
+}
+
+/* Weryfikacja */
+function greeting(string) {
+    let newString = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === 'a' || string[i] === 'A') {
+            newString += '4';
+        } else if (string[i] === 'e' || string[i] === 'E') {
+            newString += '3';
+        } else if (string[i] === 'i' || string[i] === 'I') {
+            newString += '1';
+        } else if (string[i] === 'o' || string[i] === 'O') {
+            newString += '0';
+        } else if (string[i] === 's' || string[i] === 'S') {
+            newString += '5';
+        } else {
+            newString += string[i];
+        }
+    }
+    // Convert odd characters to uppercase
+    let output = '';
+    for (let i = 0; i < newString.length; i++) {
+        if (i % 2 === 0) {
+            output += newString[i].toUpperCase();
+        } else {
+            output += newString[i];
+        }
+    }
+    return output;
+}
+
+function verify(input, goal) {
+    if (input === goal) {
+        console.log('Gratulacje!');
+    } else {
+        console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
+    }
+}
+
+verify(greeting('hacker'), 'H4Ck3r');
+verify(greeting('Control Is An Illusion'), 'C0NtR0L 15 4N 1lLu510n');
+verify(greeting('Saving The World'), '54V1Ng tH3 w0rLd');
